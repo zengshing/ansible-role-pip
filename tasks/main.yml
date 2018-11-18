@@ -1,4 +1,6 @@
 ---
+- include_task: base.yml
+
 - name: Ensure Pip is installed.
   package:
     name: "{{ pip_package }}"
