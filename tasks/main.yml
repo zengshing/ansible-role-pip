@@ -14,6 +14,5 @@
     virtualenv: "{{ item.virtualenv | default(omit) }}"
     state: "{{ item.state | default(omit) }}"
     executable: "{{ pip_executable }}"
-    extra_args: -i {{ pip_package_repo }}
-    extra_args: --trusted-host {{ trust_domain }}
+    extra_args: -i {{ pip_package_repo }} --trusted-host {{ trust_domain }}
   with_items: "{{ pip_install_packages }}"
