@@ -7,8 +7,6 @@ base_packages:
 # For Python 3, use python3-pip.
 pip_package: python-pip
 pip_executable: "{{ 'pip3' if pip_package.startswith('python3') else 'pip' }}"
-pip_package_repo: http://mirrors.aliyun.com/pypi/simple/
-trust_domain: mirrors.aliyun.com
 pip_install_packages:
   - name: MySQL-python
     state: latest
@@ -18,3 +16,11 @@ pip_install_packages:
   - name: web.py
   - name: demjson
   - name: supervisor
+
+#  pip package repository
+# 阿里云 http://mirrors.aliyun.com/pypi/simple/
+# 中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/
+# 豆瓣(douban) http://pypi.douban.com/simple/
+# 清华大学 https://pypi.tuna.tsinghua.edu.cn/simple/
+pip_package_repo: http://mirrors.aliyun.com/pypi/simple/
+trust_domain: mirrors.aliyun.com
