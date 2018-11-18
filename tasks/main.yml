@@ -1,5 +1,6 @@
 ---
-- include_task: base.yml
+
+- include_tasks: base.yml
 
 - name: Ensure Pip is installed.
   package:
