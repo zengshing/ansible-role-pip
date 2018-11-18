@@ -1,6 +1,7 @@
 ---
 base_packages:
   - mysql-devel
+  - python-devel
   - gcc
   - setuptool
 # For Python 3, use python3-pip.
