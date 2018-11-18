@@ -3,7 +3,7 @@
 pip_package: python-pip
 pip_executable: "{{ 'pip3' if pip_package.startswith('python3') else 'pip' }}"
 pip_package_repo: https://pypi.douban.com/simple
-pip_install_packages: 
+pip_install_packages:
   - name: MySQL-python
     state: latest
   - name: python-redis
@@ -12,4 +12,3 @@ pip_install_packages:
   - name: web.py
   - name: demjson
   - name: supervisor
-
