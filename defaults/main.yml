@@ -7,7 +7,7 @@ base_packages:
 # For Python 3, use python3-pip.
 pip_package: python-pip
 pip_executable: "{{ 'pip3' if pip_package.startswith('python3') else 'pip' }}"
-pip_package_repo: http://pypi.douban.com/simple
+pip_package_repo: http://mirrors.aliyun.com/pypi/simple/
 pip_install_packages:
   - name: MySQL-python
     state: latest
