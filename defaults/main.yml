@@ -8,6 +8,7 @@ base_packages:
 pip_package: python-pip
 pip_executable: "{{ 'pip3' if pip_package.startswith('python3') else 'pip' }}"
 pip_package_repo: http://mirrors.aliyun.com/pypi/simple/
+trust_domain: mirrors.aliyun.com
 pip_install_packages:
   - name: MySQL-python
     state: latest
