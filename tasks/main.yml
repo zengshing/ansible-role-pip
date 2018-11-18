@@ -11,4 +11,5 @@
     virtualenv: "{{ item.virtualenv | default(omit) }}"
     state: "{{ item.state | default(omit) }}"
     executable: "{{ pip_executable }}"
+    extra_args: -i {{ pip_package_repo }}
   with_items: "{{ pip_install_packages }}"
